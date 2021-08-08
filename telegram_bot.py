@@ -3,13 +3,16 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 class TelethonBot():
+    async def baslat(self):
+        await self.client.connect()
+ 
     def __init__(self, api_id: int, api_hash: str) -> None:
         self.client = TelegramClient(
             r'hkeybot', api_id, api_hash
         )
-        await self.client.connect()
+        self.client.run_until_complete(self.baslat())
 
-
+ 
     async def get_user_info(self, username: str) -> str:
         user = await self.client(GetFullUserRequest(username))
         info =  {
