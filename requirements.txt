@@ -1,0 +1,5 @@
+Flask==1.1.2
+asyncio
+Telethon
+telethon
+gunicorn==20.0.4
