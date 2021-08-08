@@ -7,7 +7,7 @@ class TelethonBot():
         self.client = TelegramClient(
             r'hkeybot', api_id, api_hash
         )
-        self.client.start()
+        self.client.connect()
 
 
     async def get_user_info(self, username: str) -> str:
