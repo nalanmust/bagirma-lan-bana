@@ -22,7 +22,7 @@ def api_page(telegram_username: str):
     )
 
     return render_template(
-        "svg.html", info=info
+        "svg.svg", info=info
     )
 
 
