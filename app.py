@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 from telegram_bot import TelethonBot
 import asyncio
 
@@ -20,7 +20,8 @@ def api_page(telegram_username: str):
             telegram_username
         )
     )
-
+    response = Response()
+    response.headers["Content-Type"] = "image/svg+xml"
     return render_template(
         "svg.svg", info=info
     )
