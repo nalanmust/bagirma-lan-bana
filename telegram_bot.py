@@ -10,7 +10,7 @@ class TelethonBot():
  
     def __init__(self, api_id: int, api_hash: str) -> None:
         self.client = TelegramClient(
-            r'hkeybot', api_id, api_hash
+            None, api_id, api_hash
         )
         self.loop = asyncio.get_event_loop()
         self.loop.run_until_complete(self.baslat())
